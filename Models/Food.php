@@ -6,8 +6,16 @@ class Food extends Product {
     public float $peso;
     public string $tipo;
 
-    public function __construct($id, $nome_prodotto, $categoria, $icona, $prezzo, $stock, float $peso, string $tipo){
-        parent::__construct($id, $nome_prodotto, $categoria, $icona, $prezzo, $stock);
+    public function __construct($id,
+    $nome_prodotto,
+    $categoria,
+    $prezzo,
+    $stock,
+    $icona_immagine,
+    float $peso,
+    string $tipo)
+    {
+        parent::__construct($id, $nome_prodotto, $categoria, $prezzo, $stock, $icona_immagine);
         $this->peso = $peso;
         $this->tipo = $tipo;
     }
@@ -20,7 +28,16 @@ class Food extends Product {
         $foods = [];
         foreach ($dataToArray as $key => $value) {
             
-            $foods[] = new Food($value['id'], $value['nome_prodotto'], $value['categoria']['nome'], $value['categoria']['icona'], (int)$value['prezzo'], $value['stock'], $value['peso'], $value['tipo']);
+            $foods[] = new Food(
+                $value['id'],
+                $value['nome_prodotto'],
+                $value['categoria']['nome'],
+                $value['categoria']['icona'],
+                (int)$value['prezzo'],
+                $value['stock'],
+                $value['icona_immagine'],
+                (int)$value['peso'],
+                $value['tipo']);
             
         }
         return $foods;
@@ -28,4 +45,3 @@ class Food extends Product {
     }
     
 }
-

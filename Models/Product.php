@@ -8,13 +8,15 @@ class Product {
     public $categoria;
     public $prezzo;
     public int $stock;
+    public string $icona_immagine;
     
-    public function __construct( $id, $nome_prodotto, $categoria, $prezzo, $stock) {
+    public function __construct( $id, $nome_prodotto, $categoria, $prezzo, $stock, $icona_immagine) {
         $this->id = $id;
         $this->nome_prodotto = $nome_prodotto;
         $this->categoria = $categoria;
         $this->prezzo = $prezzo;
         $this->stock = $stock;
+        $this->icona_immagine = $icona_immagine;
     }
     
 
