@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script  src="./js-script/script.js" defer></script>
-    <title>default format</title>
+    <title>php4cats</title>
 </head>
 
 <body>
