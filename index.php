@@ -10,7 +10,7 @@ $accessories= Accessories::fetchAccessories();
 ?>
 <main class="container">
     <section>
-        <h2> Cibo </h2>
+        <h2 class="as-debug"> Cibo </h2>
         <div class="row">
         <?php
         
