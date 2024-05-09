@@ -25,6 +25,7 @@
     <header>
         <div class="container">
             <h1>Zoolando</h1>
-            <a href="index.php?category=cani">Cani</a>
+        <?php include __DIR__ . '/navbar.php'; ?>
+            
         </div>
     </header>

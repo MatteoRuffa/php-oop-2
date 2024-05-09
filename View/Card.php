@@ -18,7 +18,10 @@ function createCard($product) {
               <p class='card-text'>Vestiario: {$product->vestiario}</p>";
     }
 
-    echo "<a href='Cart.php?action=add&id={$product->id}' class='btn btn-primary'>Aggiungi al carrello</a>
+    echo "<a href='Cart.php?action=add&id={$product->id}' >
+            <img src='Img/{$product->categoria['icona']}' class='card-img-top' alt='Icona del prodotto'>
+             Aggiungi al carrello
+        </a>
           </div>
           </div>
         </div>";

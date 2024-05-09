@@ -1,4 +1,5 @@
 <?php
+session_start();
 include __DIR__ . '/View/header.php';
 include __DIR__ . '/Models/Food.php';
 include __DIR__ . '/Models/Toys.php';
@@ -26,13 +27,8 @@ if ($type === 'food') {
 } else {
     $itemsToys = Toys::fetchToys($category);
     $itemsFood = Food::fetchFood($category);
-    //var_dump($itemsToys);
     $itemsAccessories = Accessories::fetchAccessories($category);
     $items = array_merge($itemsToys, $itemsFood, $itemsAccessories);
-    // var_dump($itemsFood);
-    // var_dump($itemsToys);
-    // var_dump($itemsAccessories);
-    //die;
 }
 
 foreach ($items as $item) {

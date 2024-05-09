@@ -1,5 +1,4 @@
 <?php
-
 include_once __DIR__ . '/Product.php';
 
 
@@ -24,9 +23,9 @@ include_once __DIR__ . '/Product.php';
     public static function fetchToys($category = null){
         $data =  file_get_contents(__DIR__ . '/toys_db.json');
         $dataToArray = json_decode($data, true);
-        $dataFiltered = array_filter($dataToArray, function ($value) use ($category) {
+        $dataFiltered = array_filter($dataToArray, function ($value) use ($category){
             $newArray = [];
-            if ($category === null || $category == $value['categoria']['nome'] ) {
+            if ($category === null || $category == $value['categoria']['nome']) {
             $newArray[] = $value;
             }   
             return $newArray;
