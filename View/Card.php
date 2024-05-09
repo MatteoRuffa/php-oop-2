@@ -2,7 +2,7 @@
 function createCard($product) {
     echo "<div class='col-12 col-md-4 col-lg-3'>
             <div class='card' >
-            <img src='{$product->icona_immagine}' class='card-img-top' alt='Icona del prodotto'>
+            <img src='Img/{$product->icona_immagine}' class='card-img-top' alt='Icona del prodotto'>
             <div class='card-body'>
                 <h5 class='card-title'>{$product->nome_prodotto}</h5>
                 <p class='card-text'>Prezzo: {$product->prezzo}€</p>";

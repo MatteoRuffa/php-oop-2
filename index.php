@@ -4,41 +4,42 @@ include __DIR__ . '/Models/Food.php';
 include __DIR__ . '/Models/Toys.php';
 include __DIR__ . '/Models/Accessories.php';
 include __DIR__ . '/View/Card.php';
-$foods= Food::fetchFood();
-$toys= Toys::fetchToys();
-$accessories= Accessories::fetchAccessories();
+// $foods= Food::fetchFood();
+// $toys= Toys::fetchToys();
+// $accessories= Accessories::fetchAccessories();
 ?>
 <main class="container">
-    <section>
-        <h2 class="as-debug"> Cibo </h2>
-        <div class="row">
-        <?php
-        
-        foreach ($foods as $food) {
-            createCard($food);
-        }
-        ?>
-    </section>
-    <section>
-        <h2> Giochi </h2>
-        <div class="row">
-        <?php
-        
-        foreach ($toys as $toy){
-            createCard($toy);
-        }
-        ?>
-    </section>
-    <section>
-        <h2> Accessori </h2>
-        <div class="row">
-        <?php
-        
-        foreach ($accessories as $accessory){
-            createCard($accessory);
-        }
-        ?>
-    </section>
+    <div class="row">
+
+    
+<?php
+$category = isset($_GET['category']) ? $_GET['category'] : null;
+$type = isset($_GET['type']) ? $_GET['type'] : null;
+
+
+if ($type === 'food') {
+    $items = Food::fetchFood($category);
+} elseif ($type === 'toy') {
+    $items = Toys::fetchToys($category);
+} elseif ($type === 'accessory') {
+    $items = Accessories::fetchAccessories($category);
+} else {
+    $itemsToys = Toys::fetchToys($category);
+    $itemsFood = Food::fetchFood($category);
+    //var_dump($itemsToys);
+    $itemsAccessories = Accessories::fetchAccessories($category);
+    $items = array_merge($itemsToys, $itemsFood, $itemsAccessories);
+    // var_dump($itemsFood);
+    // var_dump($itemsToys);
+    // var_dump($itemsAccessories);
+    //die;
+}
+
+foreach ($items as $item) {
+    createCard($item);
+}
+?>
+</div>
     
 
 
