@@ -79,12 +79,12 @@
     },
     {
         "id" : 7,
-        "nome_prodotto" : "Gonna da uccello",
+        "nome_prodotto" : "Cassetta per uccelli",
         "categoria" : {
-            "nome": "pesci",
+            "nome": "uccelli",
             "icona": "url.jpg"
         },
-        "icona_immagine" : "gonna_uccello.jpg",
+        "icona_immagine" : "cassetta_uccelli.jpg",
         "prezzo" : 9.99,
         "stock" : 20,
         "mobilio" : "No",
@@ -92,12 +92,12 @@
     },
     {
         "id" : 8,
-        "nome_prodotto" : "Cappellino da pesce",
+        "nome_prodotto" : "Filtro per l'acquario del pesce",
         "categoria" : {
             "nome": "pesci",
             "icona": "url.jpg"
         },        
-        "icona_immagine" : "cappellino_pesce.jpg",
+        "icona_immagine" : "filtro_pesci.jpg",
         "prezzo" : 7.99,
         "stock" : 15,
         "mobilio" : "No",
