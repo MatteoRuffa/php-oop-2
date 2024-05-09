@@ -27,16 +27,15 @@ class Food extends Product {
 
         $foods = [];
         foreach ($dataToArray as $key => $value) {
-            
+            //if($categoria === null || $value['categoria']['nome'] === $categoria)
             $foods[] = new Food(
                 $value['id'],
                 $value['nome_prodotto'],
-                $value['categoria']['nome'],
-                $value['categoria']['icona'],
-                (int)$value['prezzo'],
+                $value['categoria'],
+                (float)$value['prezzo'],
                 $value['stock'],
                 $value['icona_immagine'],
-                (int)$value['peso'],
+                (float)$value['peso'],
                 $value['tipo']);
             
         }

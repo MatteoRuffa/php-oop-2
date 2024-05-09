@@ -23,5 +23,7 @@
 
 <body>
     <header>
-        <h1>Zoolando</h1>
+        <div class="container">
+            <h1>Zoolando</h1>
+        </div>
     </header>

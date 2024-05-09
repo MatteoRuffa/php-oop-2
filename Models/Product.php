@@ -5,7 +5,7 @@
 class Product {
     public int $id;
     public string $nome_prodotto;
-    public $categoria;
+    public array $categoria;
     public $prezzo;
     public int $stock;
     public string $icona_immagine;
