@@ -1,4 +1,5 @@
 <?php
+
 function createCard($product) {
     echo "<div class='col-12 col-md-4 col-lg-3'>
             <div class='card' >
