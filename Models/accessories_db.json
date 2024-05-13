@@ -1,10 +1,10 @@
 [
     {
-        "id" : 1,
+        "id" : "a1",
         "nome_prodotto" : "Albero per gatti",
         "categoria" : {
             "nome": "gatti",
-            "icona": "url.jpg"
+            "icona": "cat.jpg"
         },        
         "icona_immagine" : "albero_gatti.jpg",
         "prezzo" : 49.99,
@@ -13,11 +13,11 @@
         "vestiario" : "No"
     },
     {
-        "id" : 2,
+        "id" : "a2",
         "nome_prodotto" : "Cuscino ortopedico per cani",
         "categoria" : {
-            "nome": "gatti",
-            "icona": "url.jpg"
+            "nome": "cani",
+            "icona": "dog.jpg"
         },        
         "icona_immagine" : "cuscino_cani.jpg",
         "prezzo" : 29.99,
@@ -26,11 +26,11 @@
         "vestiario" : "No"
     },
     {
-        "id" : 3,
+        "id" : "a3",
         "nome_prodotto" : "Gabbia in metallo per uccelli",
         "categoria" : {
-            "nome": "cani",
-            "icona": "url.jpg"
+            "nome": "uccelli",
+            "icona": "bird.jpg"
         },        
         "icona_immagine" : "gabbia_uccelli.jpg",
         "prezzo" : 39.99,
@@ -39,11 +39,11 @@
         "vestiario" : "No"
     },
     {
-        "id" : 4,
+        "id" : "a4",
         "nome_prodotto" : "Acquario in vetro per pesci",
         "categoria" : {
-            "nome": "cani",
-            "icona": "url.jpg"
+            "nome": "pesci",
+            "icona": "fish.jpg"
         },
         "icona_immagine" : "acquario_pesci.jpg",
         "prezzo" : 79.99,
@@ -52,24 +52,24 @@
         "vestiario" : "No"
     },
     {
-        "id" : 5,
-        "nome_prodotto" : "Giacigatto",
+        "id" : "a5",
+        "nome_prodotto" : "Mangiatoio per uccelli",
         "categoria" : {
             "nome": "uccelli",
-            "icona": "url.jpg"
+            "icona": "bird.jpg"
         },        
-        "icona_immagine" : "giacigatto.jpg",
+        "icona_immagine" : "mangiatoio_uccelli.jpg",
         "prezzo" : 19.99,
         "stock" : 30,
         "mobilio" : "No",
         "vestiario" : "Sì"
     },
     {
-        "id" : 6,
+        "id" : "a6",
         "nome_prodotto" : "Maglione per cani",
         "categoria" : {
-            "nome": "uccelli",
-            "icona": "url.jpg"
+            "nome": "cani",
+            "icona": "dog.jpg"
         },        
         "icona_immagine" : "maglione_cani.jpg",
         "prezzo" : 14.99,
@@ -78,11 +78,11 @@
         "vestiario" : "Sì"
     },
     {
-        "id" : 7,
+        "id" : "a7",
         "nome_prodotto" : "Cassetta per uccelli",
         "categoria" : {
             "nome": "uccelli",
-            "icona": "url.jpg"
+            "icona": "bird.jpg"
         },
         "icona_immagine" : "cassetta_uccelli.jpg",
         "prezzo" : 9.99,
@@ -91,11 +91,11 @@
         "vestiario" : "Sì"
     },
     {
-        "id" : 8,
+        "id" : "a8",
         "nome_prodotto" : "Filtro per l'acquario del pesce",
         "categoria" : {
             "nome": "pesci",
-            "icona": "url.jpg"
+            "icona": "fish.jpg"
         },        
         "icona_immagine" : "filtro_pesci.jpg",
         "prezzo" : 7.99,

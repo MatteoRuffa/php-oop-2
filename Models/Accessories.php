@@ -7,13 +7,20 @@ class Accessories extends Product{
         $this->mobilio = $mobilio;
         $this->vestiario = $vestiario; 
     }
-    public static function fetchAccessories(){
+    public static function fetchAccessories($category){
         $data =  file_get_contents(__DIR__ . '/accessories_db.json');
         $dataToArray = json_decode($data, true);
+        $dataFiltered = array_filter($dataToArray, function ($value) use ($category){
+            $newArray = [];
+            if ($category === null || $category == $value['categoria']['nome']) {
+            $newArray[] = $value;
+            }   
+            return $newArray;
+        });
 
         $accessories = [];
-        foreach ($dataToArray as $key => $value) {
-            //if ($category === null || $value['categoria']['nome'] === $category) {
+        foreach ($dataFiltered as $key => $value) {
+            if ($category === null ||$category == $value['categoria']['nome']) {
                 $accessories[] = new Accessories(
                     $value['id'],
                     $value['nome_prodotto'],
@@ -26,6 +33,6 @@ class Accessories extends Product{
         }
         return $accessories;
     
-        
+    }
 }
 }

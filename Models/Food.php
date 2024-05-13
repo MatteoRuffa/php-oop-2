@@ -21,13 +21,15 @@ class Food extends Product {
     }
 
     //metodo che prende i dati dal database e li inserisce in un array php
-    public static function fetchFood(){
+    public static function fetchFood($category = null){
+        
         $data =  file_get_contents(__DIR__ . '/food_db.json');
         $dataToArray = json_decode($data, true);
 
         $foods = [];
         foreach ($dataToArray as $key => $value) {
-            //if($categoria === null || $value['categoria']['nome'] === $categoria)
+
+            if($category === null || $value['categoria']['nome'] === $category){
             $foods[] = new Food(
                 $value['id'],
                 $value['nome_prodotto'],
@@ -37,7 +39,7 @@ class Food extends Product {
                 $value['icona_immagine'],
                 (float)$value['peso'],
                 $value['tipo']);
-            
+            }
         }
         return $foods;
         

@@ -25,5 +25,7 @@
     <header>
         <div class="container">
             <h1>Zoolando</h1>
+        <?php include __DIR__ . '/navbar.php'; ?>
+            
         </div>
     </header>

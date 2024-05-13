@@ -3,7 +3,7 @@
 // include_once __DIR__ . '/AnimalsCategory.php';
 
 class Product {
-    public int $id;
+    public string $id;
     public string $nome_prodotto;
     public array $categoria;
     public $prezzo;
